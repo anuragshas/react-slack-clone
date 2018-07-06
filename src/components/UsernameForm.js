@@ -20,20 +20,24 @@ class UsernameForm extends React.Component {
 
   onSubmit(e) {
     e.preventDefault();
-    this.props.onSubmit(this.state.username);
+    if (this.state.username) {
+      this.props.onSubmit(this.state.username);
+    }
   }
 
   render() {
     return (
       <div>
-        <form onSubmit={this.onSubmit}>
-          <input
-            type="text"
-            placeholder="What is your username?"
-            onChange={this.onChange}
-          />
-          <input type="submit" />
-        </form>
+        <div>
+          <h1>What is your Name?</h1>
+          <form onSubmit={this.onSubmit}>
+            <input
+              type="text"
+              onChange={this.onChange}
+            />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </div>
     );
   }
