@@ -6,11 +6,19 @@ class WhosOnlineList extends Component {
     if (this.props.users) {
       return (
         <div className="rooms-list">
+          <h3>Online Members:</h3>
           <ul>
             {this.props.users.map((user, index) => {
-              return (<li key={index}>
-                <p>{user.name}({user.presence.state})</p>
-                {user.presence.lastSeenAt && <p>Last Seen:{moment(user.presence.lastSeenAt).fromNow()}</p>}
+              let active = '';
+              if (user.presence.state === 'online') {
+                active = 'active'
+              }
+              return (<li className={'user ' + active} key={index}>
+                <p> <span className={'dot ' + active}></span> {user.name}</p>
+                {user.presence.lastSeenAt &&
+                  <p className="last-seen">
+                    last seen {moment(user.presence.lastSeenAt).fromNow()}
+                  </p>}
               </li>)
             })}
           </ul>

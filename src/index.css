@@ -57,6 +57,20 @@ html,body {
 }
 
 /* REST OF CSS */
+.dot {
+  height: 8px;
+  width: 8px;
+  filter: alpha(opacity=60);
+	opacity: 0.6;
+  border: 2px solid var(--secondary-color);
+	border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active{
+  background-color: var(--secondary-color);
+}
+
 .rooms-list {
   box-sizing: border-box;
   padding: 10px;
@@ -79,11 +93,24 @@ html,body {
   color: var(--secondary-color);
 }
 
-.rooms-list .room a {
+.rooms-list .user p {
   color: var(--secondary-text-color);
   font-weight: 600;
   text-decoration: none;
   
+}
+.rooms-list .user.active p {
+  color: var(--secondary-color);
+}
+
+.rooms-list .last-seen{
+  font-size: 12px;
+}
+
+.rooms-list .room a {
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  text-decoration: none; 
 }
 
 .rooms-list .room.active a {
