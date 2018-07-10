@@ -84,12 +84,12 @@ class ChatScreen extends Component {
 
   render() {
     return (
-      <div>
+      <div className="chat-screen">
         <WhosOnlineList users={this.state.currentRoom.users} />
-        <h1>Chat</h1>
-        <p>Hello,{this.props.username}</p>
-        <MessageList messages={this.state.messages} />
-        <TypingIndicator usersWhoAreTyping={this.state.usersWhoAreTyping} />
+        <div className="message-list">
+          <MessageList messages={this.state.messages} />
+          <TypingIndicator usersWhoAreTyping={this.state.usersWhoAreTyping} />
+        </div>
         <SendMessageForm
           onSubmit={(text) => this.sendMessage(text)}
           onChange={() => this.sendTypingEvent()} />
