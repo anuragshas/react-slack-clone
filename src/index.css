@@ -18,12 +18,32 @@ html,body {
   height:100%;
 }
 
-.username-form{
+.username-screen{
   display: grid;
+  height: 100%;
   grid-template-columns: 1fr;
-  grid-template: 100px 100px;
   justify-items: center;
   align-items: center;
+  background-color: var(--main-color);
+}
+
+.username-screen input{
+  border: 0;
+  width: 75%;
+  margin-left: 25%;
+  border-bottom: 2px solid var(--secondary-text-color);
+  background: none;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.username-screen input:focus{
+  border-bottom: 2px solid var(--secondary-color);
+  outline: none;
+}
+
+.username-screen h1{
+  font-size: 2.5rem;
 }
 
 .chat-screen {

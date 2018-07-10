@@ -27,9 +27,9 @@ class UsernameForm extends Component {
 
   render() {
     return (
-      <div className="username-form">
+      <div className="username-screen">
         <div>
-          <h2>What is your Name?</h2>
+          <h1>What is your Name?</h1>
           <form onSubmit={this.onSubmit}>
             <input
               type="text"
