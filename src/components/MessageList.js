@@ -15,7 +15,17 @@ class MessageList extends Component {
     return (
       <div className="message-list">
         {this.props.messages.map((message, index) => {
-          return <Message key={index} user={message.senderId} text={message.text} />
+          let active = '';
+          let user = message.senderId;
+          if (this.props.currentUser === message.senderId) {
+            active = 'active';
+            user = 'You';
+          }
+          return <Message
+            key={index}
+            user={user}
+            text={message.text}
+            active={active} />
         })}
         <TypingIndicator usersWhoAreTyping={this.props.usersWhoAreTyping} />
       </div>

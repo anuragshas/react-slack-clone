@@ -87,7 +87,8 @@ class ChatScreen extends Component {
         <WhosOnlineList users={this.state.currentRoom.users} />
         <MessageList
           messages={this.state.messages}
-          usersWhoAreTyping={this.state.usersWhoAreTyping} />
+          usersWhoAreTyping={this.state.usersWhoAreTyping}
+          currentUser={this.state.currentUser.name} />
         <SendMessageForm
           onSubmit={(text) => this.sendMessage(text)}
           onChange={() => this.sendTypingEvent()} />

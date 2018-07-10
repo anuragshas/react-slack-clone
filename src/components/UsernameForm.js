@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class UsernameForm extends React.Component {
+class UsernameForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,15 +27,14 @@ class UsernameForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="username-form">
         <div>
-          <h1>What is your Name?</h1>
+          <h2>What is your Name?</h2>
           <form onSubmit={this.onSubmit}>
             <input
               type="text"
               onChange={this.onChange}
             />
-            <button type="submit">Submit</button>
           </form>
         </div>
       </div>
