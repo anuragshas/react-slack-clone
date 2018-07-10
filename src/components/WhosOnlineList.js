@@ -19,7 +19,7 @@ class WhosOnlineList extends Component {
     }
     else {
       return (
-        <div>Loading...</div>
+        <div className="rooms-list">Loading...</div>
       );
     }
 

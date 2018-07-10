@@ -60,7 +60,6 @@ html,body {
 .rooms-list > ul {
   list-style-type: none;    
   padding: 0;
-  overflow: scroll;
 }
 
 .rooms-list li {
